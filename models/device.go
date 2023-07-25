@@ -3,6 +3,11 @@ package models
 import "time"
 
 // Device  设备
+const (
+	DeviceOnLine  = 1 // 设备在线
+	DeviceOffLine = 0 // 设备离线
+)
+
 type Device struct {
 	ID            int64     `gorm:"column:id" db:"id" json:"id"`                                     //  自增主键
 	UserId        int64     `gorm:"column:user_id" db:"user_id" json:"user_id"`                      //  账户id
